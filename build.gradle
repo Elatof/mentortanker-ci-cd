@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    dependencies {
+        implementation 'junit:junit:4.13.1'
+    }
+}
+
+jar.enabled = false
