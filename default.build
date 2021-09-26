@@ -1,0 +1,44 @@
+<project name="builders" default="dist">
+    <description>
+        Ant build for all modules
+    </description>
+    <target name="build" depends="admin-build, service-build, utils-build, web-build" />
+    <target name="test" depends="admin-test, service-test, utils-test, web-test" />
+    <target name="clean">
+        <delete dir="target"/>
+    </target>
+
+    <target name="admin-build">
+        <ant antfile= "ant-build/admin-build.xml" target="dist" />
+    </target>
+
+    <target name="service-build">
+        <ant antfile="ant-build/services-build.xml" target="dist" />
+    </target>
+
+    <target name="utils-build">
+        <ant antfile="ant-build/utils-build.xml" target="dist" />
+    </target>
+
+    <target name="web-build">
+        <ant antfile="ant-build/web-build.xml" target="dist" />
+    </target>
+
+    <target name="utils-test">
+        <ant antfile="ant-build/utils-build.xml" target="junit" />
+    </target>
+
+    <target name="admin-test">
+        <ant antfile= "ant-build/admin-build.xml" target="junit" />
+    </target>
+
+    <target name="service-test">
+        <ant antfile="ant-build/services-build.xml" target="junit" />
+    </target>
+
+
+    <target name="web-test">
+        <ant antfile="ant-build/web-build.xml" target="junit" />
+    </target>
+
+</project>
