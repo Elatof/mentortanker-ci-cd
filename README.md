@@ -1,6 +1,6 @@
 # build-tools
 ## 1. Maven
-#### to build project
+#### to build maven project
 ```bash
 mvn build
 ```
