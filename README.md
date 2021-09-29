@@ -2,7 +2,7 @@
 ## 1. Maven
 #### to build project
 ```bash
-mvn build 
+mvn build
 ```
 #### to run test
 ```bash
