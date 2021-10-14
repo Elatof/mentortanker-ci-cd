@@ -13,7 +13,11 @@ repositories {
 
 test {
     useJUnitPlatform()
-}
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }}
 
 allprojects {
     apply plugin: 'java'
